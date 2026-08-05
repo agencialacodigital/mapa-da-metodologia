@@ -854,6 +854,20 @@ fbq('track', 'PageView');
       });
     }
 
+    try {
+      fetch('https://omnpvrixdqtsdzmlrclj.supabase.co/functions/v1/leadcapture-script/a0a3eb68-5198-45a5-97e5-097d1b93d43c/444a997f-70fc-48d7-b71a-d5436205d199', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tbnB2cml4ZHF0c2R6bWxyY2xqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5ODkzMTcsImV4cCI6MjA5NDU2NTMxN30.cYOoc_iillMB-2RuJSj7H5SG5KAw2QmB8Rj6YfmL9S8'
+        },
+        body: JSON.stringify({ name: name, email: email, phone: phoneDigits }),
+        keepalive: true
+      }).catch(function(err) { console.warn('leadcapture-script: falha ao enviar lead', err); });
+    } catch (err) {
+      console.warn('leadcapture-script: erro ao enviar lead', err);
+    }
+
     formWrap.style.display = 'none';
     successWrap.classList.add('show');
 
