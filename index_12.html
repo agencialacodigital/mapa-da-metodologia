@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imersão Da Insegurança à Clareza na Pesquisa — Melissa Masoni</title>
+<meta name="description" content="Imersão online e ao vivo nos dias 26 e 27 de agosto, às 19h. Aprenda a transformar sua experiência, prática ou inquietação em um caminho de pesquisa com mais clareza sobre tema, recorte, problema, metodologia e escrita acadêmica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '836580628845972');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=836580628845972&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+  /* ── Reset & Base ─────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --purple:       #3e2b70;
+    --purple-dark:  #2e1f56;
+    --purple-light: #f0edf8;
+    --purple-mid:   #6b55a0;
+    --sage:         #93a695;
+    --sage-light:   #e8ede9;
+    --sage-dark:    #6b7d6d;
+    --cream:        #fcfaf6;
+    --cream-dark:   #f4f0e8;
+    --white:        #ffffff;
+    --text:         #2a2a2a;
+    --text-mid:     #555555;
+    --text-light:   #888888;
+    --serif:        'Playfair Display', Georgia, serif;
+    --sans:         'Inter', system-ui, sans-serif;
+    --bar-h: 0px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+  }
+  .eyebrow--light { color: var(--sage-light); }
+  h1, h2, h3 { font-family: var(--serif); line-height: 1.2; color: var(--purple); }
+  h1 { font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; }
+  h2 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); font-weight: 700; }
+  h3 { font-size: 1.3rem; font-weight: 700; }
+  p { font-family: var(--sans); color: var(--text-mid); font-size: 1.03rem; line-height: 1.8; }
+  .lead { font-size: 1.18rem; color: var(--text); }
+  strong { color: var(--purple); font-weight: 600; }
+  em { font-style: italic; }
+
+  /* ── Layout helpers ────────────────────────────────────────────────── */
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  .container--wide { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 80px 0; }
+  .center { text-align: center; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+  .bg-purple { background: var(--purple); color: var(--white); }
+  .bg-purple h1, .bg-purple h2, .bg-purple h3 { color: var(--white); }
+  .bg-purple p { color: rgba(255,255,255,0.82); }
+  .bg-sage-light { background: var(--sage-light); }
+  .bg-cream-dark { background: var(--cream-dark); }
+  .bg-white { background: var(--white); }
+
+  /* ── Buttons ───────────────────────────────────────────────────────── */
+  .btn {
+    display: inline-block;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    padding: 18px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn--primary {
+    background: linear-gradient(135deg, var(--sage) 0%, #a9bfab 50%, var(--sage) 100%);
+    background-size: 200% 200%;
+    color: var(--white);
+    box-shadow: 0 0 0 0 rgba(147,166,149,0.6), 0 4px 20px rgba(147,166,149,0.5);
+    animation: btnGlow 2.2s ease-in-out infinite, btnShine 3.4s ease-in-out infinite;
+  }
+  .btn--primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 0 8px rgba(147,166,149,0), 0 10px 32px rgba(147,166,149,0.65);
+    animation-play-state: paused;
+  }
+  @keyframes btnGlow {
+    0%   { box-shadow: 0 0 0 0 rgba(147,166,149,0.55), 0 4px 20px rgba(147,166,149,0.45); }
+    50%  { box-shadow: 0 0 0 10px rgba(147,166,149,0), 0 4px 26px rgba(147,166,149,0.7); }
+    100% { box-shadow: 0 0 0 0 rgba(147,166,149,0.55), 0 4px 20px rgba(147,166,149,0.45); }
+  }
+  @keyframes btnShine {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .btn--purple {
+    background: var(--purple);
+    color: var(--white);
+    box-shadow: 0 4px 20px rgba(62,43,112,0.35);
+  }
+  .btn--purple:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(62,43,112,0.45); }
+  .btn--block { display: block; width: 100%; text-align: center; }
+  .btn-wrap { text-align: center; margin-top: 36px; }
+  .btn-sub { display: block; font-size: 0.78rem; color: var(--sage-dark); margin-top: 12px; letter-spacing: 0.03em; }
+  .bg-purple .btn-sub { color: rgba(255,255,255,0.6); }
+
+  /* ── Divider ───────────────────────────────────────────────────────── */
+  .divider {
+    width: 48px; height: 3px;
+    background: var(--sage);
+    margin: 18px auto;
+    border-radius: 2px;
+  }
+
+
+
+  /* ── NAV ───────────────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: var(--bar-h); left: 0; right: 0; z-index: 100;
+    background: rgba(62,43,112,0.97);
+    backdrop-filter: blur(8px);
+    padding: 14px 0;
+    transition: top 0.15s;
+  }
+  .nav-inner {
+    max-width: 1060px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand {
+    font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
+    color: var(--white); text-decoration: none; letter-spacing: 0.01em;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .nav-brand span { color: var(--sage); }
+  .logo-mark { height: 38px; width: auto; flex-shrink: 0; display: block; }
+  .nav-cta {
+    font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+    color: var(--white); background: var(--sage);
+    padding: 9px 20px; border-radius: 4px; text-decoration: none;
+    transition: background 0.2s; white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--sage-dark); }
+
+  /* ── HERO ──────────────────────────────────────────────────────────── */
+  #hero {
+    background:
+      linear-gradient(160deg, rgba(46,31,86,0.93) 0%, rgba(62,43,112,0.9) 45%, rgba(107,85,160,0.72) 100%),
+      url('hero-bg.jpg') center 30% / cover no-repeat;
+    padding: calc(150px + var(--bar-h)) 0 70px;
+    position: relative;
+    overflow: hidden;
+    transition: padding-top 0.15s;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; top: -20%; right: -10%;
+    width: 480px; height: 480px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(147,166,149,0.2) 0%, rgba(147,166,149,0) 70%);
+  }
+  #hero .container { position: relative; z-index: 2; max-width: 720px; }
+  #hero h1 { color: var(--white); margin: 18px 0 22px; }
+  #hero .lead { color: rgba(255,255,255,0.85); max-width: 620px; margin: 0 auto 34px; }
+  #hero .eyebrow { color: var(--sage); }
+
+  .date-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(147,166,149,0.35);
+    border-radius: 10px;
+    padding: 30px 28px;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .date-card .date-line {
+    font-family: var(--sans); font-weight: 600; font-size: 0.95rem;
+    color: var(--white); letter-spacing: 0.02em; margin-bottom: 6px;
+  }
+  .date-card .price-line {
+    font-family: var(--serif); font-size: 1.4rem; color: var(--sage);
+    margin-bottom: 20px;
+  }
+  .date-card .price-line b { font-size: 1.7rem; }
+
+  /* ── Story / opening ───────────────────────────────────────────────── */
+  #abertura p { font-size: 1.08rem; }
+  #abertura .highlight {
+    font-family: var(--serif); font-style: italic; color: var(--purple);
+    font-size: 1.3rem; margin: 30px 0; line-height: 1.5;
+    border-left: 3px solid var(--sage); padding-left: 20px;
+  }
+  #abertura .quote-line { font-size: 1.5rem; font-style: italic; font-family: var(--serif); color: var(--purple); margin: 10px 0; }
+
+  /* ── Checklist / identification ───────────────────────────────────── */
+  .check-list { list-style: none; margin: 0 auto; max-width: 660px; }
+  .check-list li {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 0; border-bottom: 1px solid var(--sage-light);
+    font-size: 1.03rem; color: var(--text);
+  }
+  .check-list li:last-child { border-bottom: none; }
+  .check-list .icon {
+    flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--sage); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; margin-top: 2px;
+  }
+  .cross-list .icon { background: var(--purple-mid); }
+
+  /* ── Cards grid: learnings ────────────────────────────────────────── */
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .card {
+    background: var(--white); border-radius: 10px; padding: 30px 26px;
+    border: 1px solid var(--cream-dark);
+    box-shadow: 0 4px 18px rgba(62,43,112,0.05);
+  }
+  .card .num {
+    font-family: var(--serif); font-size: 1.6rem; color: var(--sage);
+    display: block; margin-bottom: 10px;
+  }
+  .card h3 { font-size: 1.12rem; margin-bottom: 10px; }
+  .card p { font-size: 0.95rem; }
+
+  /* ── CALMA map ─────────────────────────────────────────────────────── */
+  .calma-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .calma-item {
+    background: var(--white); border-radius: 10px; padding: 26px 16px;
+    text-align: center; border-top: 4px solid var(--sage);
+  }
+  .calma-item .letter {
+    font-family: var(--serif); font-size: 2.2rem; color: var(--purple);
+    display: block; line-height: 1;
+  }
+  .calma-item h3 { font-size: 1rem; margin: 10px 0 8px; }
+  .calma-item p { font-size: 0.86rem; line-height: 1.5; }
+
+  /* ── Programação timeline ─────────────────────────────────────────── */
+  .timeline { display: grid; gap: 26px; }
+  .day-card {
+    background: var(--white); border-radius: 10px; padding: 32px;
+    display: grid; grid-template-columns: 130px 1fr; gap: 26px;
+    align-items: start; border: 1px solid var(--cream-dark);
+  }
+  .day-card .day-badge {
+    background: var(--purple); color: var(--white); border-radius: 8px;
+    padding: 16px 10px; text-align: center;
+  }
+  .day-badge .d-num { font-family: var(--serif); font-size: 1.8rem; display: block; }
+  .day-badge .d-label { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); }
+  .day-badge .d-time { font-size: 0.78rem; margin-top: 6px; color: rgba(255,255,255,0.7); }
+
+  /* ── Para quem é / não é ───────────────────────────────────────────── */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .compare-card { border-radius: 10px; padding: 30px 28px; }
+  .compare-card.yes { background: var(--sage-light); }
+  .compare-card.no { background: var(--purple-light); }
+  .compare-card h3 { margin-bottom: 18px; }
+  .compare-card ul { list-style: none; }
+  .compare-card li {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 10px 0; font-size: 0.96rem; color: var(--text);
+  }
+  .compare-card .mark { flex-shrink: 0; font-weight: 700; margin-top: 2px; }
+  .compare-card.yes .mark { color: var(--sage-dark); }
+  .compare-card.no .mark { color: var(--purple-mid); }
+
+  /* ── Antes / Depois ────────────────────────────────────────────────── */
+  .transform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .transform-col h3 { margin-bottom: 20px; }
+  .transform-col.before h3 { color: var(--text-light); }
+  .transform-col ul { list-style: none; }
+  .transform-col li {
+    padding: 12px 0; border-bottom: 1px solid var(--cream-dark);
+    font-size: 0.95rem; font-style: italic; color: var(--text-mid);
+  }
+  .transform-col.after li { font-style: normal; color: var(--text); }
+
+  /* ── Sobre Melissa ─────────────────────────────────────────────────── */
+  .about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 44px; align-items: center; }
+  .about-photo {
+    width: 220px; height: 220px; border-radius: 50%;
+    background: var(--purple-light);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 34px rgba(62,43,112,0.15);
+    overflow: hidden;
+  }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+
+  /* ── Oferta / pricing ──────────────────────────────────────────────── */
+  .price-box {
+    background: var(--white); border-radius: 14px; padding: 46px 40px;
+    text-align: center; max-width: 480px; margin: 0 auto;
+    box-shadow: 0 10px 40px rgba(62,43,112,0.12);
+    border-top: 5px solid var(--sage);
+  }
+  .price-box .old-price { font-size: 1.1rem; color: var(--text-light); text-decoration: line-through; }
+  .price-box .new-price { font-family: var(--serif); font-size: 3.2rem; color: var(--purple); margin: 6px 0 4px; }
+  .price-box .new-price small { font-size: 1.3rem; font-family: var(--sans); font-weight: 600; }
+  .price-box .price-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 26px; }
+
+  /* ── FAQ ───────────────────────────────────────────────────────────── */
+  .faq-item {
+    border-bottom: 1px solid var(--sage-light);
+  }
+  .faq-q {
+    width: 100%; text-align: left; background: none; border: none;
+    padding: 22px 4px; font-family: var(--sans); font-weight: 600;
+    font-size: 1.02rem; color: var(--purple); cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .faq-q .plus { font-size: 1.3rem; color: var(--sage); transition: transform 0.25s; flex-shrink: 0; }
+  .faq-item.open .faq-q .plus { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-a p { padding: 0 4px 22px; font-size: 0.96rem; }
+
+  /* ── Fechamento ────────────────────────────────────────────────────── */
+  #fechamento { text-align: center; }
+  #fechamento .quote { font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--white); max-width: 640px; margin: 0 auto 26px; line-height: 1.5; }
+  #fechamento .final-line { font-size: 0.85rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.65); margin-top: 24px; }
+
+  /* ── Recap list ────────────────────────────────────────────────────── */
+  .recap-box { background: var(--white); border-radius: 12px; padding: 40px; max-width: 640px; margin: 0 auto; box-shadow: 0 8px 30px rgba(62,43,112,0.08); }
+
+  /* ── Depoimento (vídeo) ────────────────────────────────────────────── */
+  .testimonial-video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 34px rgba(62,43,112,0.18);
+  }
+  .testimonial-video-wrap iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+  }
+
+  /* ── Sticky mobile CTA ─────────────────────────────────────────────── */
+  #sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+    background: var(--white); border-top: 1px solid var(--sage-light);
+    padding: 12px 16px; display: none;
+    box-shadow: 0 -6px 24px rgba(62,43,112,0.12);
+  }
+  #sticky-cta .btn { width: 100%; padding: 14px; font-size: 0.88rem; }
+
+  footer { background: var(--purple-dark); color: rgba(255,255,255,0.55); text-align: center; padding: 34px 0; font-size: 0.8rem; }
+
+  /* ── Lead modal ────────────────────────────────────────────────────── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 200;
+    background: rgba(46,31,86,0.6);
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--white); border-radius: 14px;
+    max-width: 420px; width: 100%; padding: 38px 32px 32px;
+    position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    max-height: 90vh; overflow-y: auto;
+  }
+  .modal-close {
+    position: absolute; top: 14px; right: 16px;
+    background: none; border: none; font-size: 1.4rem; line-height: 1;
+    color: var(--text-light); cursor: pointer; padding: 4px;
+  }
+  .modal-close:hover { color: var(--purple); }
+  .modal-box h3 { font-size: 1.35rem; margin-bottom: 8px; }
+  .modal-box .modal-sub { font-size: 0.92rem; color: var(--text-mid); margin-bottom: 24px; }
+  .modal-field { margin-bottom: 16px; text-align: left; }
+  .modal-field label {
+    display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em;
+    color: var(--purple); margin-bottom: 6px; text-transform: uppercase;
+  }
+  .modal-field input {
+    width: 100%; font-family: var(--sans); font-size: 0.98rem;
+    padding: 13px 14px; border: 1px solid var(--cream-dark); border-radius: 6px;
+    background: var(--cream); color: var(--text); outline: none;
+    transition: border-color 0.2s;
+  }
+  .modal-field input:focus { border-color: var(--sage); }
+  .modal-field .field-error { display: none; font-size: 0.76rem; color: #b4453a; margin-top: 5px; }
+  .modal-field.invalid input { border-color: #b4453a; }
+  .modal-field.invalid .field-error { display: block; }
+  .modal-note { font-size: 0.74rem; color: var(--text-light); text-align: center; margin-top: 14px; }
+  .modal-success { display: none; text-align: center; padding: 10px 0; }
+  .modal-success.show { display: block; }
+  .modal-success .icon-ok {
+    width: 56px; height: 56px; border-radius: 50%; background: var(--sage-light);
+    color: var(--sage-dark); font-size: 1.6rem; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 18px;
+  }
+
+  /* ── Responsive ────────────────────────────────────────────────────── */
+  @media (max-width: 860px) {
+    .about-grid { grid-template-columns: 1fr; text-align: center; }
+    .about-photo { margin: 0 auto; }
+    .calma-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    section { padding: 56px 0; }
+    .card-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .transform-grid { grid-template-columns: 1fr; }
+    .day-card { grid-template-columns: 1fr; }
+    .day-card .day-badge { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; }
+    #sticky-cta { display: block; }
+    body { padding-bottom: 74px; }
+  }
+  @media (max-width: 560px) {
+    .calma-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">
+      <img class="logo-mark" src="logo-melissa-masoni.png" alt="Melissa Masoni — Mentora Acadêmica">
+    </a>
+    <a href="#" class="nav-cta js-buy-btn">GARANTIR VAGA</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ 1. HERO ═══════════════════════ -->
+<section id="hero">
+  <div class="container center">
+    <span class="eyebrow">Imersão da insegurança à clareza na pesquisa</span>
+    <h1>Transforme uma ideia ainda solta em um caminho de pesquisa possível, coerente e autoral.</h1>
+    <p class="lead">Em dois encontros online e ao vivo, você compreenderá como articular tema, recorte, problema, objetivos e metodologia para construir uma pesquisa com direção, coerência e autoria.</p>
+    <p class="lead">Uma experiência pensada para mulheres que desejam ingressar ou avançar no mestrado e no doutorado, conciliando as exigências acadêmicas com as condições reais da própria vida.</p>
+
+    <div class="date-card">
+      <div class="date-line">26 e 27 de agosto · 19h · Online e ao vivo</div>
+      <div class="price-line"><b>100% Ao vivo e Gratuito</b></div>
+      <button type="button" class="btn btn--primary btn--block js-buy-btn">QUERO FAZER MINHA INSCRIÇÃO</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 2. RECONHECIMENTO ═══════════════════════ -->
+<section id="reconhecimento" class="bg-white">
+  <div class="container">
+    <p class="lead">Você não precisa começar sua pesquisa sabendo todas as respostas. Precisa compreender quais perguntas e decisões dão forma a um caminho de investigação possível.</p>
+    <p>Muitas mulheres chegam à pesquisa com experiência, repertório e questões relevantes, mas encontram dificuldade para transformar o que sabem em tema delimitado, problema de pesquisa, objetivos e escolhas metodológicas coerentes.</p>
+    <p>Isso não significa falta de capacidade. Significa que existe uma lógica acadêmica que precisa ser compreendida — e que raramente é ensinada de maneira clara, articulada e conectada à realidade de quem pesquisa.</p>
+    <div class="divider" style="margin: 32px auto;"></div>
+    <p>A <strong>Imersão Da Insegurança à Clareza na Pesquisa</strong> foi criada para mulheres que possuem uma ideia, experiência ou inquietação, mas ainda não conseguiram transformá-la em uma pesquisa acadêmica ou em um projeto de pesquisa.</p>
+    <p>Em duas noites online e ao vivo, você compreenderá como tema, recorte, problema, objetivos, leitura e método se relacionam. Com o Mapa CALMA, começará a identificar o que já está claro, o que ainda precisa ser construído e qual deve ser o seu próximo passo.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 3. O RESULTADO ═══════════════════════ -->
+<section id="resultado" class="bg-sage-light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color: var(--purple-mid);">O que você leva com você</span>
+      <h2>O resultado da imersão</h2>
+      <div class="divider"></div>
+    </div>
+    <p class="lead center">Ao final da imersão, você terá iniciado seu <strong>Mapa CALMA de Pesquisa</strong>: um registro organizado do que já possui, do que ainda precisa delimitar e das decisões necessárias para continuar construindo sua pesquisa ou projeto.</p>
+    <ul class="check-list" style="margin-top: 36px;">
+      <li><span class="icon">✓</span> Vai identificar, dentro da sua experiência ou inquietação, uma possível pergunta de pesquisa.</li>
+      <li><span class="icon">✓</span> Vai diferenciar tema, recorte e problema — e a função de cada um.</li>
+      <li><span class="icon">✓</span> Vai iniciar a construção de objetivos coerentes com o problema formulado.</li>
+      <li><span class="icon">✓</span> Vai reconhecer que caminho metodológico pode responder à sua pergunta.</li>
+      <li><span class="icon">✓</span> Vai localizar os pontos frágeis da sua pesquisa e o que ainda precisa de sustentação.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 4. MAPA CALMA ═══════════════════════ -->
+<section id="calma" class="bg-white">
+  <div class="container--wide">
+    <div class="section-head">
+      <span class="eyebrow">O método</span>
+      <h2>O Mapa CALMA de Pesquisa</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="calma-grid">
+      <div class="calma-item">
+        <span class="letter">C</span>
+        <h3>Clareza</h3>
+        <p>Compreender o que você deseja investigar e delimitar um foco possível.</p>
+      </div>
+      <div class="calma-item">
+        <span class="letter">A</span>
+        <h3>Autoria</h3>
+        <p>Reconhecer sua relação com a questão e assumir conscientemente as escolhas da pesquisa.</p>
+      </div>
+      <div class="calma-item">
+        <span class="letter">L</span>
+        <h3>Leitura</h3>
+        <p>Construir repertório e compreender quais debates sustentam o problema.</p>
+      </div>
+      <div class="calma-item">
+        <span class="letter">M</span>
+        <h3>Método</h3>
+        <p>Definir caminhos de investigação coerentes com a pergunta e os objetivos.</p>
+      </div>
+      <div class="calma-item">
+        <span class="letter">A</span>
+        <h3>Acolhimento</h3>
+        <p>Compreender os atravessamentos e as condições reais em que cada mulher constrói sua pesquisa, oferecendo direção, apoio e segurança para mostrar que é possível avançar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 5. PROGRAMAÇÃO ═══════════════════════ -->
+<section id="programacao" class="bg-sage-light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color: var(--purple-mid);">Programação</span>
+      <h2>Duas noites, ao vivo, às 19h</h2>
+      <div class="divider"></div>
+      <p>Encontros ao vivo, com gravação disponível por 7 dias exclusivamente para as inscritas.</p>
+    </div>
+    <div class="timeline">
+      <div class="day-card">
+        <div class="day-badge">
+          <span class="d-num">26</span>
+          <span class="d-label">Agosto</span>
+          <div class="d-time">19h</div>
+        </div>
+        <div>
+          <h3>Da experiência ao caminho de pesquisa</h3>
+          <p>Como organizar tema, recorte e problema a partir daquilo que você já vive, observa ou investiga.</p>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-badge">
+          <span class="d-num">27</span>
+          <span class="d-label">Agosto</span>
+          <div class="d-time">19h</div>
+        </div>
+        <div>
+          <h3>Sustentação acadêmica da pesquisa</h3>
+          <p>Como objetivos, metodologia e escrita precisam conversar entre si para dar coerência ao seu projeto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 6. PARA QUEM É ═══════════════════════ -->
+<section id="paraquem" class="bg-white">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Essa imersão é pra você?</span>
+      <h2>Para quem é a imersão</h2>
+      <div class="divider"></div>
+    </div>
+    <p class="lead">Esta imersão foi criada para mulheres que estão construindo uma pesquisa para ingressar ou avançar no mestrado ou no doutorado.</p>
+    <p class="center" style="font-weight: 600; color: var(--purple);">Ela é para você que:</p>
+    <ul class="check-list" style="max-width: 640px;">
+      <li><span class="icon">✓</span> Busca avançar academicamente enquanto concilia estudos, trabalho, família, cuidado e outras responsabilidades que fazem parte de sua vida.</li>
+      <li><span class="icon">✓</span> Está se preparando para um processo seletivo e precisa transformar uma ideia, experiência ou inquietação em um projeto de pesquisa.</li>
+      <li><span class="icon">✓</span> Já está no mestrado ou no doutorado e precisa encontrar mais clareza para escrever, estruturar ou conduzir sua pesquisa.</li>
+      <li><span class="icon">✓</span> Deseja compreender como tema, recorte, problema, objetivos e metodologia se articulam.</li>
+      <li><span class="icon">✓</span> Precisa tomar decisões metodológicas com mais segurança e coerência.</li>
+      <li><span class="icon">✓</span> Deseja construir uma pesquisa consistente, possível e alinhada à própria autoria.</li>
+    </ul>
+    <p>Esta imersão também pode fazer sentido para você que está concluindo a graduação e já começou a se preparar para uma seleção de mestrado ou doutorado.</p>
+    <div class="divider" style="margin: 32px auto;"></div>
+    <p class="center" style="font-weight: 600; color: var(--purple);">Para quem esta imersão não foi pensada</p>
+    <p>Esta imersão tem um foco específico: mulheres que desejam aprender a construir e a conduzir seus projetos e pesquisas de mestrado e doutorado.</p>
+    <p>Por isso, ela não foi pensada para quem busca exclusivamente:</p>
+    <ul class="check-list cross-list" style="max-width: 640px;">
+      <li><span class="icon">✕</span> Apoio para atividades, provas ou trabalhos de disciplinas da graduação.</li>
+      <li><span class="icon">✕</span> Explicação pontual de um texto, uma lei, um artigo ou outro conteúdo acadêmico.</li>
+      <li><span class="icon">✕</span> Acompanhamento voltado apenas à leitura, à interpretação de textos ou à aprendizagem da escrita acadêmica.</li>
+      <li><span class="icon">✕</span> Orientação para demandas que não estejam relacionadas à elaboração de um projeto, uma dissertação ou uma tese.</li>
+    </ul>
+    <p class="lead" style="margin-top: 24px;">Se a sua dificuldade está ligada à construção de uma pesquisa para ingressar ou avançar no mestrado ou no doutorado, esta imersão foi pensada para o momento que você está vivendo.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 7. QUEM CONDUZ ═══════════════════════ -->
+<section id="sobre" class="bg-sage-light">
+  <div class="container--wide">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="foto-melissa.jpg" alt="Melissa Masoni">
+      </div>
+      <div>
+        <span class="eyebrow" style="color: var(--purple-mid);">Quem conduzirá a imersão</span>
+        <h2>Melissa Masoni</h2>
+        <div class="divider" style="margin-left:0;"></div>
+        <p>Melissa Masoni é pesquisadora, orientadora acadêmica, mentora para mulheres e idealizadora do Método CALMA.</p>
+        <p>Ao longo de sua trajetória profissional, Melissa percebeu uma situação recorrente: muitas mulheres chegavam à pesquisa com experiência, repertório e questões relevantes, mas encontravam dificuldade para transformar o que sabiam em um problema acadêmico claro, tomar decisões metodológicas e sustentar a escrita diante das exigências concretas da vida.</p>
+        <p>Em 2025, essa percepção foi aprofundada por uma pesquisa conduzida com mulheres vinculadas a universidades públicas e privadas brasileiras. Os dados mostraram que, por trás da insegurança acadêmica, havia ideias importantes ainda sem estrutura, excesso de informações, pouco domínio do percurso metodológico e a necessidade de uma orientação que reconhecesse a inteligência, a bagagem e as condições reais de cada pesquisadora.</p>
+        <p>Foi a partir da convergência entre experiência profissional, escuta e investigação que Melissa sistematizou o Método CALMA, uma metodologia própria em que rigor e sensibilidade deixam de ocupar lugares opostos e passam a sustentar uma mesma construção acadêmica.</p>
+        <p>Essa forma de trabalhar foi amadurecida ao longo de mais de dez anos de atuação com orientação, revisão, estruturação metodológica e acompanhamento acadêmico. Nesse período, Melissa já acompanhou mais de 400 estudantes, professores e pesquisadores, da graduação ao doutorado, em diferentes etapas da construção de projetos, artigos, monografias, dissertações e teses.</p>
+        <p>Sua experiência também reúne trabalhos de consultoria, pesquisa, revisão e tradução desenvolvidos para universidades como UNIRio, UERJ e UFF, além de instituições e organizações como Fundação Getulio Vargas — FGV, Petrobras e Prefeitura de Macaé.</p>
+        <p class="lead"><strong>É essa experiência que orientará a imersão:</strong> não a entrega de fórmulas prontas, mas uma condução capaz de ajudá-la a compreender a lógica da pesquisa, organizar suas ideias e avançar com mais clareza, autoria e direção.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 8. O QUE ESTÁ INCLUÍDO ═══════════════════════ -->
+<section id="incluso" class="bg-white">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Ao garantir sua vaga</span>
+      <h2>O que está incluído</h2>
+      <div class="divider"></div>
+    </div>
+    <ul class="check-list">
+      <li><span class="icon">✓</span> Duas noites de aulas ao vivo — 26 e 27 de agosto, às 19h.</li>
+      <li><span class="icon">✓</span> Gravação disponível por 7 dias, exclusiva para as inscritas.</li>
+      <li><span class="icon">✓</span> Condução prática para organizar a lógica inicial da sua pesquisa.</li>
+      <li><span class="icon">✓</span> Início do seu Mapa CALMA de Pesquisa.</li>
+      <li><span class="icon">✓</span> Direcionamento para identificar os pontos frágeis da sua pesquisa.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 8.5 DEPOIMENTO ═══════════════════════ -->
+<section id="depoimento" class="bg-cream-dark">
+  <div class="container center">
+    <span class="eyebrow">Prova social</span>
+    <h2>Quem já viveu a imersão conta</h2>
+    <div class="divider"></div>
+    <div class="testimonial-video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/UoZJJLIqrzg"
+        title="Depoimento de Kirsty sobre a Imersão Da Insegurança à Clareza na Pesquisa"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <p style="margin-top: 18px; font-weight: 600; color: var(--purple);">Kirsty</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 9. PARTICIPAÇÃO ═══════════════════════ -->
+<section id="investimento" class="bg-purple">
+  <div class="container center">
+    <span class="eyebrow">Participação</span>
+    <h2>Um primeiro passo com direção</h2>
+    <div class="divider"></div>
+    <p>Você poderia continuar tentando organizar sua pesquisa sozinha — ou pode dar o primeiro passo com uma condução clara, séria e acolhedora.</p>
+
+    <div class="price-box" style="margin-top: 32px;">
+      <span class="eyebrow">100% Ao vivo e Gratuito</span>
+      <div class="new-price" style="font-size: 2.2rem;">Inscrição gratuita</div>
+      <div class="price-meta">Participação online e ao vivo · 26 e 27 de agosto · às 19h</div>
+      <button type="button" class="btn btn--primary btn--block js-buy-btn">QUERO FAZER MINHA INSCRIÇÃO</button>
+      <span class="btn-sub">Vagas limitadas · Acesso via grupo no WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 10. FAQ ═══════════════════════ -->
+<section id="faq" class="bg-cream-dark">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color: var(--purple-mid);">Dúvidas frequentes</span>
+      <h2>Perguntas frequentes</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Vou sair com meu projeto pronto? <span class="plus">+</span></button>
+      <div class="faq-a"><p>Não. Essa não é a promessa da imersão. A proposta é que você compreenda a lógica inicial da pesquisa, comece a enxergar com mais clareza o caminho que precisa construir e inicie seu Mapa CALMA de Pesquisa.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Preciso já estar no mestrado? <span class="plus">+</span></button>
+      <div class="faq-a"><p>Não. A imersão também é para quem quer tentar o mestrado e ainda está organizando suas primeiras ideias de projeto.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">A imersão é gravada? <span class="plus">+</span></button>
+      <div class="faq-a"><p>Sim. As aulas acontecem ao vivo nos dias 26 e 27 de agosto, às 19h, e a gravação fica disponível por 7 dias, exclusivamente para as inscritas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FECHAMENTO ═══════════════════════ -->
+<section id="fechamento" class="bg-purple">
+  <div class="container">
+    <p class="quote">Você não chegou até aqui por acaso.</p>
+    <p style="color: rgba(255,255,255,0.82);">Sua prática, experiência ou inquietação pode conter uma questão academicamente relevante, desde que seja delimitada, problematizada e sustentada por escolhas coerentes.</p>
+    <p style="color: rgba(255,255,255,0.82); margin-top: 16px;">A questão não é se você é capaz.<br><strong style="color:var(--sage);">A questão é aprender a organizar o caminho.</strong></p>
+    <div class="btn-wrap">
+      <button type="button" class="btn btn--primary js-buy-btn">QUERO FAZER MINHA INSCRIÇÃO</button>
+    </div>
+    <p class="final-line">26 e 27 de agosto · 19h · Online e ao vivo · 100% Gratuito</p>
+  </div>
+</section>
+
+<footer>
+  <img src="logo-icon-melissa-masoni.png" alt="Melissa Masoni" style="width:22px; height:auto; margin: 0 auto 10px; opacity:0.9;">
+  <p>Melissa Masoni · Imersão Da Insegurança à Clareza na Pesquisa</p>
+</footer>
+
+<div id="sticky-cta">
+  <a href="#" class="btn btn--primary js-buy-btn">QUERO GARANTIR MINHA VAGA — GRATUITO</a>
+</div>
+
+<!-- ═══════════════════════ MODAL DE INSCRIÇÃO ═══════════════════════ -->
+<div id="lead-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="modal-close-btn" aria-label="Fechar">×</button>
+
+    <div id="modal-form-wrap">
+      <h3>Garanta sua vaga</h3>
+      <p class="modal-sub">Preencha seus dados pra gente liberar seu acesso gratuito à Imersão.</p>
+
+      <form id="lead-form" novalidate>
+        <div class="modal-field" id="field-name">
+          <label for="lead-name">Nome completo</label>
+          <input type="text" id="lead-name" name="name" autocomplete="name" required>
+          <span class="field-error">Digite seu nome completo.</span>
+        </div>
+        <div class="modal-field" id="field-email">
+          <label for="lead-email">E-mail</label>
+          <input type="email" id="lead-email" name="email" autocomplete="email" required>
+          <span class="field-error">Digite um e-mail válido.</span>
+        </div>
+        <div class="modal-field" id="field-phone">
+          <label for="lead-phone">Telefone / WhatsApp</label>
+          <input type="tel" id="lead-phone" name="phone" autocomplete="tel" placeholder="(11) 91234-5678" required>
+          <span class="field-error">Digite um telefone válido com DDD.</span>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">QUERO GARANTIR MINHA VAGA</button>
+        <p class="modal-note">Ao continuar, você será direcionada para o grupo oficial da Imersão no WhatsApp.</p>
+      </form>
+    </div>
+
+    <div id="modal-success" class="modal-success">
+      <div class="icon-ok">✓</div>
+      <h3>Tudo certo!</h3>
+      <p class="modal-sub">Estamos te redirecionando para o grupo da Imersão no WhatsApp...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function() {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(other) {
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+<script>
+  var WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/Ffag2lpSzCB71IqjeOXVWs';
+
+  var modal = document.getElementById('lead-modal');
+  var formWrap = document.getElementById('modal-form-wrap');
+  var successWrap = document.getElementById('modal-success');
+  var form = document.getElementById('lead-form');
+  var closeBtn = document.getElementById('modal-close-btn');
+  var phoneInput = document.getElementById('lead-phone');
+
+  function openModal() {
+    form.reset();
+    formWrap.style.display = 'block';
+    successWrap.classList.remove('show');
+    ['field-name','field-email','field-phone'].forEach(function(id){
+      document.getElementById(id).classList.remove('invalid');
+    });
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.js-buy-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  function maskPhone(value) {
+    var digits = value.replace(/\D/g, '').slice(0, 11);
+    var out = '';
+    if (digits.length > 0) out += '(' + digits.substring(0, 2);
+    if (digits.length >= 2) out += ') ';
+    if (digits.length > 2) {
+      if (digits.length <= 10) {
+        out += digits.substring(2, 6);
+        if (digits.length > 6) out += '-' + digits.substring(6, 10);
+      } else {
+        out += digits.substring(2, 7);
+        if (digits.length > 7) out += '-' + digits.substring(7, 11);
+      }
+    }
+    return out;
+  }
+
+  phoneInput.addEventListener('input', function(e) {
+    e.target.value = maskPhone(e.target.value);
+  });
+
+  function isValidEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  function isValidPhone(value) {
+    return value.replace(/\D/g, '').length >= 10;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var nameEl = document.getElementById('lead-name');
+    var emailEl = document.getElementById('lead-email');
+    var phoneEl = document.getElementById('lead-phone');
+
+    var nameOk = nameEl.value.trim().length >= 3;
+    var emailOk = isValidEmail(emailEl.value.trim());
+    var phoneOk = isValidPhone(phoneEl.value);
+
+    document.getElementById('field-name').classList.toggle('invalid', !nameOk);
+    document.getElementById('field-email').classList.toggle('invalid', !emailOk);
+    document.getElementById('field-phone').classList.toggle('invalid', !phoneOk);
+
+    if (!nameOk || !emailOk || !phoneOk) return;
+
+    var name = nameEl.value.trim();
+    var email = emailEl.value.trim();
+    var phoneDigits = phoneEl.value.replace(/\D/g, '');
+
+    if (typeof fbq === 'function') {
+      fbq('init', '836580628845972', {
+        em: email,
+        ph: phoneDigits,
+        fn: name.split(' ')[0]
+      });
+      fbq('track', 'Lead', {
+        content_name: 'Imersão Da Insegurança à Clareza na Pesquisa'
+      });
+    }
+
+    try {
+      fetch('https://omnpvrixdqtsdzmlrclj.supabase.co/functions/v1/leadcapture-script/a0a3eb68-5198-45a5-97e5-097d1b93d43c/444a997f-70fc-48d7-b71a-d5436205d199', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tbnB2cml4ZHF0c2R6bWxyY2xqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5ODkzMTcsImV4cCI6MjA5NDU2NTMxN30.cYOoc_iillMB-2RuJSj7H5SG5KAw2QmB8Rj6YfmL9S8'
+        },
+        body: JSON.stringify({ name: name, email: email, phone: phoneDigits }),
+        keepalive: true
+      }).catch(function(err) { console.warn('leadcapture-script: falha ao enviar lead', err); });
+    } catch (err) {
+      console.warn('leadcapture-script: erro ao enviar lead', err);
+    }
+
+    formWrap.style.display = 'none';
+    successWrap.classList.add('show');
+
+    setTimeout(function() {
+      window.location.href = WHATSAPP_GROUP_URL;
+    }, 1400);
+  });
+</script>
+
+<script>!function(){var k="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tbnB2cml4ZHF0c2R6bWxyY2xqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5ODkzMTcsImV4cCI6MjA5NDU2NTMxN30.cYOoc_iillMB-2RuJSj7H5SG5KAw2QmB8Rj6YfmL9S8",u="https://omnpvrixdqtsdzmlrclj.supabase.co/functions/v1/leadcapture-script/a0a3eb68-5198-45a5-97e5-097d1b93d43c/444a997f-70fc-48d7-b71a-d5436205d199";var x=new XMLHttpRequest;x.open("GET",u,!0),x.setRequestHeader("apikey",k),x.onload=function(){if(200===x.status){var s=document.createElement("script");s.textContent=x.responseText;(document.head||document.body).appendChild(s)}};x.send()}();</script>
+
+</body>
+</html>
